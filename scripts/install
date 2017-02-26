@@ -14,10 +14,10 @@ if [[ ! $? -eq 0 ]]; then
 echo "Error : the chosen admin user does not exist"
     exit 1
 fi
-sudo yunohost app setting shaarli admin -v $admin
+sudo yunohost app setting shaarli_old_beta admin -v $admin
 
 # Check domain/path availability
-sudo yunohost app checkurl $domain$path -a shaarli
+sudo yunohost app checkurl $domain$path -a shaarli_old_beta
 if [[ ! $? -eq 0 ]]; then
   exit 1
 fi
@@ -26,8 +26,8 @@ fi
 sudo apt-get install php5-cli -y -qq
 
 # Copy files to the right place
-app_home_path=/home/yunohost.app/shaarli
-final_path=/var/www/shaarli
+app_home_path=/home/yunohost.app/shaarli_old
+final_path=/var/www/shaarli_old
 sudo mkdir -p $final_path
 sudo cp -r ../sources/* $final_path
 
@@ -65,7 +65,7 @@ sudo chown -R www-data: $app_home_path
 # Modify Nginx configuration file and copy it to Nginx conf directory
 sudo sed -i "s@YNH_WWW_PATH@$path@g" ../conf/nginx.conf
 sudo sed -i "s@YNH_ALIAS@$final_path@g" ../conf/nginx.conf
-sudo cp ../conf/nginx.conf /etc/nginx/conf.d/$domain.d/shaarli.conf
+sudo cp ../conf/nginx.conf /etc/nginx/conf.d/$domain.d/shaarli_old.conf
 
 # Reload Nginx and regenerate SSOwat conf
 if [ $is_public = "Yes" ]; then
