@@ -14,10 +14,10 @@ $GLOBALS['config']['OPEN_SHAARLI'] = false; // If true, anyone can add/edit/dele
 $GLOBALS['config']['HIDE_TIMESTAMPS'] = false; // If true, the moment when links were saved are not shown to users that are not logged in.
 $GLOBALS['config']['HIDE_QRCODE'] = false; // If true, qrcodes are not shown.
 $GLOBALS['config']['ENABLE_THUMBNAILS'] = true; // Enable thumbnails in links.
-$GLOBALS['config']['CACHEDIR'] = '/home/yunohost.app/shaarli/cache'; // Cache directory for thumbnails for SLOW services (like flickr)
-$GLOBALS['config']['PAGECACHE'] = '/home/yunohost.app/shaarli/pagecache'; // Page cache directory.
+$GLOBALS['config']['CACHEDIR'] = '/home/yunohost.app/shaarli_old/cache'; // Cache directory for thumbnails for SLOW services (like flickr)
+$GLOBALS['config']['PAGECACHE'] = '/home/yunohost.app/shaarli_old/pagecache'; // Page cache directory.
 $GLOBALS['config']['ENABLE_LOCALCACHE'] = true; // Enable Shaarli to store thumbnail in a local cache. Disable to reduce webspace usage.
 $GLOBALS['config']['PUBSUBHUB_URL'] = ''; // PubSubHubbub support. Put an empty string to disable, or put your hub url here to enable.
 $GLOBALS['config']['UPDATECHECK_FILENAME'] = $GLOBALS['config']['DATADIR'].'/lastupdatecheck.txt'; // For updates check of Shaarli.
 $GLOBALS['config']['UPDATECHECK_INTERVAL'] = 86400 ; // Updates check frequency for Shaarli. 86400 seconds=24 hours
-$GLOBALS['config']['RTP_TMPDIR'] = '/home/yunohost.app/shaarli/tmp'; // Rain template tmp directory.
+$GLOBALS['config']['RTP_TMPDIR'] = '/home/yunohost.app/shaarli_old/tmp'; // Rain template tmp directory.
