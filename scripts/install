@@ -69,7 +69,7 @@ sudo cp ../conf/nginx.conf /etc/nginx/conf.d/$domain.d/shaarli_old.conf
 
 # Reload Nginx and regenerate SSOwat conf
 if [ $is_public = "Yes" ]; then
-  sudo yunohost app setting shaarli unprotected_uris -v "/"
+  sudo yunohost app setting shaarli_old unprotected_uris -v "/"
 fi
 sudo service nginx reload
 sudo yunohost app ssowatconf
