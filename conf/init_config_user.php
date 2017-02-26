@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-require('/home/yunohost.app/shaarli/data/config.php');
+require('/home/yunohost.app/shaarli_old/data/config.php');
 
 $userlist=$argv;
 array_shift($userlist);
@@ -42,7 +42,7 @@ $userconf .= '$GLOBALS[\'level\'] = ' . var_export($GLOBALS['level'],true) . ';'
 $userconf .= '$GLOBALS[\'email\'] = ' . var_export($GLOBALS['email'],true) . ';' . PHP_EOL;
 $userconf .= '?>';
 
-$userconf_file = '/home/yunohost.app/shaarli/data/config_user.php';
+$userconf_file = '/home/yunohost.app/shaarli_old/data/config_user.php';
 if (!file_put_contents($userconf_file, $userconf) || strcmp(file_get_contents($userconf_file),$userconf)!=0)
 {
   fwrite(STDERR, "Error while writing " . $userconf_file);
