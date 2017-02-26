@@ -1,6 +1,6 @@
 {
-  "name": "Shaarli",
-  "id": "shaarli",
+  "name": "Shaarli_beta",
+  "id": "shaarli_old_beta",
   "description": {
     "en": "The personal, minimalist, super-fast, no-database delicious clone",
     "fr": "Clone de delicious"
@@ -25,8 +25,8 @@
       "ask": {
         "en": "Choose a path for Shaarli"
       },
-      "example": "/shaarli",
-      "default": "/shaarli"
+      "example": "/shaarli-old",
+      "default": "/shaarli-old"
     },
     {
       "name": "public",
