@@ -16,11 +16,11 @@
   },
   "url": "https://github.com/shaarli/Shaarli",
   "license": "MIT",
-  "version": "0.10.4~ynh3",
+  "version": "0.11.1~ynh1",
   "multi_instance": true,
   "services": [
         "nginx",
-        "php7.0-fpm"
+        "php7.4-fpm"
     ],
   "arguments": {
     "install" : [
